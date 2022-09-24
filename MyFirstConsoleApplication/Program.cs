@@ -38,7 +38,6 @@ namespace MyFirstConsoleApplication
             // method calculates the number of days before X-mas this year.
             DateTime currentDate = DateTime.Now.Date;
             Console.WriteLine($"Today's date is: {currentDate.ToString("dd/MM/yyyy")}");
-            // this year date value is static due to the instructions
             DateTime xmas = DateTime.Parse("2022, 12, 25");
             int daysUntilX = (xmas - currentDate).Days;
             Console.WriteLine($"There are {daysUntilX} days until Christmas");
