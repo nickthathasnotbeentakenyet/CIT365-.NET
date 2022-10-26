@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Vai&family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+
+html {
+  font-size: 14px;
+}
+@media (max-width: 470px){
+    thead tr, tbody tr{
+        display: inline-grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    tbody tr:nth-of-type(2n+1){
+        background-color:#747474;
+    }
+    .manageEdit a, .manageDetails a, .manageDelete a{
+        margin: .2em;
+    }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+    .notes {
+        width: 50%;
+    }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+    margin-bottom: 60px;
+    background-color: #333;
+    color: white;
+}
+.table{
+    color: white;
+}
+.createNew a {
+    color: #50c878;
+    padding: .2em .3em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.createNew a:hover {
+    color: lightcoral;
+}
+.manageEdit a {
+    font-family: 'Orbitron', sans-serif;
+    padding: .2em .3em;
+    background-color: #50c878;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+.manageDetails a {
+    font-family: 'Orbitron', sans-serif;
+    padding: .2em .3em;
+    background-color: dodgerblue;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+.manageDelete a {
+    font-family: 'Orbitron', sans-serif;
+    padding: .2em .3em;
+    background-color: lightcoral;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+.scriptureRef a {
+    text-decoration: none;
+    background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    font-family: 'Orbitron', sans-serif;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+.scriptureRef a:hover{
+    background:none;
+    color:lightcoral;
+}
+    .manageDelete:hover, .manageDetails:hover, .manageEdit:hover {
+    opacity: .4;
+}
+.filter {
+
+}
+.filter:hover {
+
+}
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+footer div{
+    color: white;
+}
+footer a{
+    color: lightcoral;
+    text-decoration:none;
+}
+footer a:hover{
+    color: lightcoral;
+    opacity: .4;
+}
+dd a, .backSect a {
+    text-decoration: none;
+    color: #50c878;
+}
+dd a:hover, .backSect a:hover{
+    color:lightcoral;
+}
+.saveBtn {
+    font-family: 'Orbitron', sans-serif;
+    padding: .2em .3em;
+    margin-top:.5em;
+    border:none;
+    background-color: #50c878;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+.saveBtn:hover{
+    background-color: lightcoral;
+}
+
+.container .navbar-brand {
+    font-family: 'Island Moments', cursive;
+    color: #50c878;
+    font-size: xx-large;
+    font-weight:600;
+}
+.container .navbar-brand:hover {
+    color: lightcoral;
+}
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.decorator{
+    border: 7px dotted #50c878;
+    border-bottom: none;
+}
