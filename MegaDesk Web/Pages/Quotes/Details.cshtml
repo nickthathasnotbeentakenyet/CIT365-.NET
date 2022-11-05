@@ -1,0 +1,70 @@
+﻿@page "{id:int?}"
+@model MegaDesk_Web.Pages.Quotes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="quoteH1">Details</h1>
+
+<div class="detailsContainer">
+    <h4>Desk</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.firstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.firstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.lastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.lastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.deskWidth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.deskWidth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.deskDepth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.deskDepth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.rushOrder)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.rushOrder)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.surfaceMaterial)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.surfaceMaterial)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.drawers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.drawers)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.dateAdded)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.dateAdded)
+        </dd>
+    </dl>
+    <div class="back">
+        <p>
+        <a asp-page="./Edit" asp-route-id="@Model.Desk?.ID">Edit</a> |
+        <a asp-page="./Index">Back to List</a>
+        </p>
+    </div>
+</div>
+

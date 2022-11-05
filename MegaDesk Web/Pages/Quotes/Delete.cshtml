@@ -1,0 +1,72 @@
+﻿@page "{id:int?}"
+@model MegaDesk_Web.Pages.Quotes.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="quoteH1">Delete</h1>
+
+<div class="deleteQuoteGrid">
+    <h3>Are you sure you want to delete this?</h3>
+    <h4>Desk</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.firstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.firstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.lastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.lastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.deskWidth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.deskWidth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.deskDepth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.deskDepth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.rushOrder)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.rushOrder)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.surfaceMaterial)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.surfaceMaterial)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.drawers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.drawers)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.dateAdded)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.dateAdded)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Desk.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <p>
+        <a asp-page="./Index">Back to List</a>
+        </p>
+    </form>
+</div>

@@ -1,0 +1,59 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">WE DO WOOD DESKS</h1>
+</div>
+
+<div class="slideshow-container">
+    <div class="mySlides fade" id="slide1">
+        <img src="~/Images/CEPPI desk.jpg"  alt="CEPPI Desk">
+        <div class="text">CEPPI Desk</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="~/Images/corner desk.png"  alt="Corner Desk">
+        <div class="text">Corner Desk</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="~/Images/country desk.jpg" alt="Country Desk">
+        <div class="text">Country Desk</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="~/Images/monarch desk.jpg"  alt="Monarch Desk">
+        <div class="text">Monarch Desk</div>
+    </div>    
+    <div class="mySlides fade">
+        <img src="~/Images/owen oak desk.jpg"  alt="Owen Oak Desk">
+        <div class="text">Owen Oak Desk</div>
+    </div>    
+    <div class="mySlides fade">
+        <img src="~/Images/pottery barn desk.jpg" alt="Pottery Barn Desk">
+        <div class="text">Pottery Barn Desk</div>
+    </div>    
+    <div class="mySlides fade">
+        <img src="~/Images/shaped desk.jpg"  alt="Shaped Desk">
+        <div class="text">Shaped Desk</div>
+    </div>    
+    <div class="mySlides fade">
+        <img src="~/Images/wood desk top.jpg" alt="Wood Desk Top">
+        <div class="text">Wood Desk Top</div>
+    </div>
+
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<br>
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+</div>
+<script src="~/js/slideshow.js"></script>

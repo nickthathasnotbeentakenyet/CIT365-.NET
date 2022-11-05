@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-image:url('../Images/woodTexture.jpg');
+  background-color:saddlebrown;
+  color: white;
+}
+.container .navbar-brand, .container .navbar-brand:visited {
+    font-family: 'Titan One', cursive;
+    color: cornflowerblue;
+}
+.container .navbar-brand:hover {
+    color: cornflowerblue;
+    opacity: .7
+}
+.container img{
+    width: 50px;
+    padding: 0 .3em;
+}
+label{
+    color: cornflowerblue;
+    font-weight:600;
+    opacity: .9
+}
+
+
+input:focus::placeholder {
+    opacity:.5
+}
+.addQuote a {
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    position: absolute;
+    top: 6em;
+    right: 15em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    animation: radial-pulse 1.5s ease infinite;
+    transition: transform 2s;
+}
+.addQuote a:hover {
+    transform: rotate(180deg);
+    animation: radial-pulse2 1.5s ease infinite;
+    color: cornflowerblue;
+}
+
+@keyframes radial-pulse{
+    0% {
+        box-shadow: 0 0 0 0 white;
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgb(0 0 0 / 0%);
+    }
+}
+@keyframes radial-pulse2 {
+    0% {
+        box-shadow: 0 0 0 0 cornflowerblue;
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgb(0 0 0 / 0%);
+    }
+}
+input[value="Filter"]{
+    color: cornflowerblue;
+    font-weight:bold;
+}
+.manageBtns a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Audiowide', cursive;
+    padding: .2em;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+}
+.manageBtns a:hover {
+    background-color:#64beff;
+}
+.manageBtns a:nth-of-type(2) {
+    background-color: #286c6e7c;
+}
+
+.manageBtns a:nth-of-type(2):hover {
+    background-color: #7c94a0;
+}
+.manageBtns a:last-of-type{
+    background-color:crimson;
+}
+.manageBtns a:last-of-type:hover {
+    background-color:#e54162;
+}
+
+table thead, table{
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px white;
+}
+table thead tr th{
+    color: cornflowerblue;
+}
+table tbody tr td {
+    color: white;
+}
+
+table thead tr th {
+    font-family: 'Audiowide', cursive;
+}
+
+.privacyLink a {
+    color: white;
+    text-decoration: none;
+}
+.privacyLink a:hover{
+    color: cornflowerblue;
+
+}
+
+/* ADD QUOTE */
+.quoteH1{
+    text-align: center;
+}
+.addQuoteGrid form {
+    width: 60%;
+    margin: 0 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 2em;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px white;
+    padding: 1em
+}
+.form-group span{
+    color: #ffd800;
+}
+.form-group .btn{
+    background-color: cornflowerblue;
+    margin: 1em 0;
+    box-shadow: 2px 2px 5px white;
+}
+.form-group .btn:hover {
+    background-color: white;
+    color: cornflowerblue;
+    box-shadow: 2px 2px 5px cornflowerblue;
+}
+.back p {
+    margin-top: 2em;
+    text-align: end;
+}
+.back p a {
+    text-decoration: none;
+    color: white;
+}
+.back p a:hover {
+    color: cornflowerblue;
+}
+.surfacePreview{
+    margin-top: .5em;
+    box-shadow:none;
+}
+/*DETAILS PAGE*/
+
+.detailsContainer {
+    width: 60%;
+    margin: 0 20%;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px white;
+    padding: 1em;
+}
+.detailsContainer dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 0 2em;
+}
+.detailsContainer dl dt {
+    width: auto;
+}
+/*EDIT PAGE*/
+
+.editQuoteGrid form {
+    width: 60%;
+    margin: 0 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 2em;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px white;
+    padding: 1em
+}
+
+/*DELETE PAGE*/
+.deleteQuoteGrid {
+    width: 60%;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px white;
+    margin: 0 20%;
+    padding: 1em
+}
+.deleteQuoteGrid dl{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 0 2em;
+
+}
+.deleteQuoteGrid h3{
+    color: crimson;
+}
+.deleteQuoteGrid dl dt{
+    width:auto;
+}
+.deleteQuoteGrid form{
+    display: flex;
+   justify-content: space-between;
+}
+.deleteQuoteGrid form p {
+    align-content: end;
+}
+
+.deleteQuoteGrid form p a {
+    text-decoration: none;
+    color: white;
+}
+
+.deleteQuoteGrid form a:hover {
+    color: cornflowerblue;
+}
+
+
+/* HOME PAGE */
+.display-4 {
+    color: white;
+    font-family: 'Audiowide', cursive;
+}
+
+#slide1 {
+    display: block
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    width: 100%;
+    max-height: 60%;
+    margin: auto;
+    border-radius: 10px
+}
+
+main img {
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px white;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    padding: 16px;
+    margin-left: 20%;
+    margin-right:28%;
+    margin-top: -22px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px
+}
+
+.prev:hover, .next:hover {
+    background-color: #9cadce;
+    border-radius: 20px
+}
+
+.text {
+    color: white;
+    text-shadow: 1px 0px black;
+    background-color: #286c6e7c;
+    opacity: .5;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 12px;
+    position: absolute;
+    bottom: 3px;
+    width: 50%;
+    margin: 0 25%;
+    text-align: center;
+    border-radius: 10px
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #546a76;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease
+}
+
+.active, .dot:hover {
+        background-color: cornflowerblue;
+    }
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 15s;
+    animation-name: fade;
+    animation-duration: 15s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .6
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .6
+    }
+
+    to {
+        opacity: 1
+    }
+}
+.mySlides img{
+    width: 50%;
+    height: 25em;
+    margin: 0 25%;
+}
+
+
+/*SLIDER*/
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slider label{
+    align-self:flex-start;
+}
+.box-minmax {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: cornflowerblue;
+}
+.rs-range {
+    width: 200px;
+    -webkit-appearance: none;
+    color: cornflowerblue;
+}
+
+.rs-range:focus {
+    outline: none;
+}
+
+.rs-range::-webkit-slider-runnable-track {
+    width: 200px;
+    height: 1px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #ffffff;
+    border-radius: 0px;
+    border: 0px solid #010101;
+}
+
+.rs-range::-moz-range-track {
+    width: 200px;
+    height: 1px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #ffffff;
+    border-radius: 0px;
+    border: 0px solid #010101;
+}
+
+.rs-range::-webkit-slider-thumb {
+    box-shadow: none;
+    border: 0px solid #ffffff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    height: 22px;
+    width: 11px;
+    border-radius: 22px;
+    background: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+}
+
+.rs-range::-moz-range-thumb {
+    box-shadow: none;
+    border: 0px solid #ffffff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    height: 22px;
+    width: 11px;
+    border-radius: 22px;
+    background: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -20px;
+}
+
+.rs-range::-moz-focus-outer {
+    border: 0;
+}
+
+.rs-label {
+    position: relative;
+    transform-origin: center center;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    margin-left: -40px;
+    left: attr(value);
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+}
+.box-minmax span, .range-slider span{
+    color: cornflowerblue;
+}

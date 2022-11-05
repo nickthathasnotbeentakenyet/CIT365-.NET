@@ -1,0 +1,76 @@
+﻿@page "{id:int?}"
+@using MegaDesk_Web.Models
+@model MegaDesk_Web.Pages.Quotes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="quoteH1">Edit</h1>
+
+<hr />
+<div class="row">
+    <div class="editQuoteGrid">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Desk.ID" />
+            <div class="form-group">
+                <label asp-for="Desk.firstName" class="control-label"></label>
+                <input asp-for="Desk.firstName" class="form-control" />
+                <span asp-validation-for="Desk.firstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desk.lastName" class="control-label"></label>
+                <input asp-for="Desk.lastName" class="form-control" />
+                <span asp-validation-for="Desk.lastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desk.deskWidth" class="control-label"></label>
+                <input asp-for="Desk.deskWidth" class="form-control" type="number" min="24" max="96" />
+                <span asp-validation-for="Desk.deskWidth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desk.deskDepth" class="control-label"></label>
+                <input asp-for="Desk.deskDepth" class="form-control" type="number" min="12" max="48" />
+                <span asp-validation-for="Desk.deskDepth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desk.drawers" class="control-label"></label>
+                <input type="number" min="0" max="7" asp-for="Desk.drawers" class="form-control" />
+                <span asp-validation-for="Desk.drawers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desk.rushOrder" class="control-label"></label>
+                <select asp-for="Desk.rushOrder" asp-items="Html.GetEnumSelectList<rushOrder>()" class="form-control"></select>
+                <span asp-validation-for="Desk.rushOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desk.surfaceMaterial" class="control-label">Surface Material</label>
+                <select asp-for="Desk.surfaceMaterial" class="form-control" >
+                    @foreach (var Item in Enum.GetValues(typeof(surfaceMaterial)))
+                    {
+                        <option id="surfOpt" value="@Convert.ToString(Item)">@Convert.ToString(Item)</option>
+                    }
+                </select>
+                <span asp-validation-for="Desk.surfaceMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desk.dateAdded" class="control-label"></label>
+                <input asp-for="Desk.dateAdded" class="form-control" />
+                <span asp-validation-for="Desk.dateAdded" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+            <div class="back">
+                <p>
+                <a asp-page="./Index">Back to List</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
