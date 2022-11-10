@@ -27,9 +27,11 @@ namespace MvcMovie.Models
         [Required]
         public string? Rating { get; set; }
 
+        [Required]
         public string? Image { get; set; }
 
     }
+
     public enum GenreEnum
     {
         Comedy,
@@ -43,4 +45,5 @@ namespace MvcMovie.Models
         PG,
         PH13
     }
+
 }
