@@ -31,10 +31,14 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Movies[0].Title)
+                @*@Html.DisplayNameFor(model => model.Movies[0].Title)*@
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">@Html.DisplayNameFor(model => model.Movies[0].Title)</a>
+
             </th>
             <th>
-               @Html.DisplayNameFor(model => model.Movies[0].ReleaseDate)
+               @*@Html.DisplayNameFor(model => model.Movies[0].ReleaseDate)*@
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]">@Html.DisplayNameFor(model => model.Movies[0].ReleaseDate)</a>
+
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Movies[0].Genre)

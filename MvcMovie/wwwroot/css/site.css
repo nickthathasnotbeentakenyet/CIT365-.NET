@@ -47,12 +47,31 @@ footer .container a {
     color: #d075f9;
     font-weight: 700;
 }
-
+.navbar .navbar-brand:hover {
+    color: #eecbff;
+}
 h1 {
     color:white;
     font-weight: bold;
+    text-shadow: 1px 2px black;
 }
 select option{
     background-color: #c13dfd;
     color: white;
+}
+table {
+    background-color: #dbdcff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #dba6f3;
+}
+table thead {
+    background-color: #eecbff;
+    font-size: large;
+    text-shadow: 1px 1px white;
+}
+table tbody{
+    font-weight: 400;
+}
+table tbody tr td {
+    border: none;
 }
