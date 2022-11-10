@@ -24,6 +24,9 @@ namespace MvcMovie.Controllers
         {
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewData["GenreSortParm"] = sortOrder == "Genre" ? "genre_desc" : "Genre";
+            ViewData["PriceSortParm"] = sortOrder == "Price" ? "price_desc" : "Price";
+            ViewData["RatingSortParm"] = sortOrder == "Rating" ? "rating_desc" : "Rating";
             ViewData["CurrentFilter"] = searchString;
 
             IQueryable<string> genreQuery = from m in _context.Movie
@@ -52,6 +55,24 @@ namespace MvcMovie.Controllers
                     break;
                 case "date_desc":
                     movies = movies.OrderByDescending(m => m.ReleaseDate);
+                    break;
+                case "Genre":
+                    movies = movies.OrderBy(m => m.Genre);
+                    break;
+                case "genre_desc":
+                    movies = movies.OrderByDescending(m => m.Genre);
+                    break;
+                case "Price":
+                    movies = movies.OrderBy(m => m.Price);
+                    break;
+                case "price_desc":
+                    movies = movies.OrderByDescending(m => m.Price);
+                    break;
+                case "Rating":
+                    movies = movies.OrderBy(m => m.Rating);
+                    break;
+                case "rating_desc":
+                    movies = movies.OrderByDescending(m => m.Rating);
                     break;
                 default:
                     movies = movies.OrderBy(m => m.Title);
