@@ -1,16 +1,15 @@
 ﻿@model MvcMovie.Models.Movie
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Add Movie";
 }
 
-<h1>Create</h1>
-
-<h4>LDS Movie</h4>
+<h1>Add Movie</h1>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-10 pages">
         <form asp-action="Create">
+            <div class="col-md-4">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
@@ -32,6 +31,11 @@
                 </select>
                 <span asp-validation-for="Genre" class="text-danger"></span>
             </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </div>
+            <div class="col-md-4">
             <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
                 <input asp-for="Price" class="form-control" />
@@ -52,16 +56,15 @@
                 <input asp-for="Image" class="form-control" value="images/" />
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <div>
+                    <a class="btn btn-default" asp-action="Index">Back</a>
+               </div>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

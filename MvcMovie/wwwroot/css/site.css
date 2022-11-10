@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Gugi&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
 html {
   font-size: 14px;
 }
@@ -28,7 +31,7 @@ body {
     width:150px;
     height:200px;
     border-radius:5px;
-    box-shadow: 3px 3px 5px #dba6f3;
+    box-shadow: 5px 5px 8px white;
 }
 
 footer {
@@ -45,33 +48,68 @@ footer .container a {
 
 .navbar .navbar-brand {
     color: #d075f9;
-    font-weight: 700;
+    font-family: 'Luckiest Guy', cursive;
 }
 .navbar .navbar-brand:hover {
     color: #eecbff;
 }
+footer {
+    font-family: 'Gugi', cursive;
+}
 h1 {
+    font-family: 'Luckiest Guy', cursive;
     color:white;
-    font-weight: bold;
-    text-shadow: 1px 2px black;
+    text-shadow: 1px 2px #c13dfd;
+}
+.homePage h1 {
+    background-image: linear-gradient(to right, #dba6f3, #d075f9, #0094ff, #b200ff);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow: none;
 }
 select option{
     background-color: #c13dfd;
     color: white;
 }
 table {
-    background-color: #dbdcff;
     border-radius: 10px;
     box-shadow: 5px 5px 5px #dba6f3;
 }
-table thead {
-    background-color: #eecbff;
-    font-size: large;
-    text-shadow: 1px 1px white;
-}
-table tbody{
-    font-weight: 400;
-}
+    table thead {
+        font-family: 'Gugi', cursive;
+        font-size:large;
+        text-shadow: 1px 1px white;
+        background: rgba(238, 203, 255, 0.5);
+    }
+    table tbody {
+        font-family: 'Russo One', sans-serif;
+        font-weight: 100;
+        font-size:1.1em;
+        text-shadow: 1px 1px white;
+        background: rgba(204, 204, 204, 0.5);
+    }
 table tbody tr td {
     border: none;
+    opacity: unset;
+}
+.btn-success,.btn-default, .btn-danger,.btn-primary, .btn-info {
+    text-shadow: none;
+    box-shadow: 3px 3px 5px white;
+}
+.btn-success:hover {
+    box-shadow: 3px 3px 5px #dba6f3;
+}
+.pages {
+    padding:1em;
+    font-family: 'Gugi', cursive;
+    font-size: large;
+    text-shadow: 1px 1px white;
+    background: rgba(238, 203, 255, 0.4);
+    border-radius: 10px;
+}
+hr{
+    width: 80%;
 }
