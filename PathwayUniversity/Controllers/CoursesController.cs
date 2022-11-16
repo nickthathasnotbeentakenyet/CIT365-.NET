@@ -171,5 +171,23 @@ namespace PathwayUniversity.Controllers
         {
             return _context.Courses.Any(e => e.CourseID == id);
         }
+
+
+        public IActionResult UpdateCourseCredits()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateCourseCredits(int? multiplier)
+        {
+            if (multiplier != null)
+            {
+                ViewData["RowsAffected"] =
+                    await _context.Database.ExecuteSqlRawAsync(
+                        "UPDATE Course SET Credits = Credits * {0}",
+                        parameters: multiplier);
+            }
+            return View();
+        }
     }
 }
