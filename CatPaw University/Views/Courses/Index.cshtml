@@ -1,0 +1,53 @@
+﻿@model IEnumerable<CatPaw_University.Models.Course>
+
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<h1>Courses</h1>
+
+<p>
+    <a class="btn-sm btn-info" asp-action="Create">Add New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr class="text-light text-uppercase">
+            <th>
+                @Html.DisplayNameFor(model => model.CourseID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Credits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="text-light">
+             <td>
+                @Html.DisplayFor(modelItem => item.CourseID)
+             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Credits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.Name)
+            </td>
+            <td>
+                <a class="btn-sm btn-warning" asp-action="Edit" asp-route-id="@item.CourseID">Edit</a>
+                <a class="btn-sm btn-dark" asp-action="Details" asp-route-id="@item.CourseID">Details</a>
+                    <a class="btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.CourseID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

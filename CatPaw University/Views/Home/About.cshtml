@@ -1,0 +1,37 @@
+﻿@model IEnumerable<CatPaw_University.Models.SchoolViewModels.EnrollmentDateGroup>
+
+@{
+    ViewData["Title"] = "Student Body Statistics";
+}
+
+<h2>Student Body Statistics</h2>
+
+<table class="cardview">
+    <tr class="col-sm-8">
+        <th class="col-sm-4 text-light">
+            Enrollment Date
+        </th>
+        <th class="col-sm-2 text-light">
+            Students
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="col-sm-8">
+            <td class="col-sm-4">
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td class="col-sm-4">
+                @item.StudentCount
+            </td>
+        </tr>
+    }
+</table>
+<div class="director">
+    <p class="text-light">
+        University Director: Arkadii Lantukh<br />
+        E-mail: lan18029@@byui.edu<br />
+        <img src="~/director2.jpg" class="directorImg"/>
+    </p>
+</div>

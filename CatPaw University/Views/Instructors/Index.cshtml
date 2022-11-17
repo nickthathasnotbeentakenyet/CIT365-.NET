@@ -1,0 +1,121 @@
+﻿@model CatPaw_University.Models.SchoolViewModels.InstructorIndexData
+
+@{
+    ViewData["Title"] = "Professors";
+}
+
+<h1>Professors</h1>
+
+<p>
+    <a class="btn-sm btn-info" asp-action="Create">Add New</a>
+</p>
+<table class="table text-light">
+    <thead>
+        <tr class="text-uppercase">
+            <th>Name</th>
+            <th>Fur Color</th>
+            <th>Hire Date</th>
+            <th>Office</th>
+            <th>Courses</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Instructors)
+        {
+            string selectedRow = "";
+            if (item.ID == (int?)ViewData["InstructorID"])
+            {
+                selectedRow = "table-success";
+            }
+            <tr class="@selectedRow">
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstMidName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HireDate)
+            </td>
+            <td>
+                @if (item.OfficeAssignment != null)
+                {
+                    @item.OfficeAssignment.Location
+                }
+            </td>
+            <td>
+                @foreach (var course in item.CourseAssignments)
+                {
+                    @course.Course.CourseID <span> </span> @course.Course.Title <br />
+                }
+            </td>
+            <td>
+                <a class="btn-sm btn-light" asp-action="Index" asp-route-id="@item.ID">Select</a> 
+                <a class="btn-sm btn-warning" asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                <a class="btn-sm btn-dark"  asp-action="Details" asp-route-id="@item.ID">Details</a>
+                <a class="btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@if (Model.Courses != null)
+{
+    <h3>Courses Taught by Selected Professor</h3>
+    <table class="table professorsTable">
+        <tr class="text-uppercase text-light">
+            <th></th>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Department</th>
+        </tr>
+
+        @foreach (var item in Model.Courses)
+        {
+            string selectedRow = "";
+            if (item.CourseID == (int?)ViewData["CourseID"])
+            {
+                selectedRow = "success";
+            }
+            <tr class="@selectedRow text-light">
+                <td>
+                    <span class="btn-sm btn-light"> @Html.ActionLink("Select", "Index", new { courseID = item.CourseID }) </span>
+                </td>
+                <td>
+                    @item.CourseID
+                </td>
+                <td>
+                    @item.Title
+                </td>
+                <td>
+                    @item.Department.Name
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+@if (Model.Enrollments != null)
+{
+    <h3>
+        Students Enrolled in Selected Course
+    </h3>
+    <table class="table text-light professorsTable">
+        <tr class="text-uppercase">
+            <th>Name</th>
+            <th>Grade</th>
+        </tr>
+        @foreach (var item in Model.Enrollments)
+        {
+            <tr>
+                <td>
+                    @item.Student.FullName
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grade)
+                </td>
+            </tr>
+        }
+    </table>
+}

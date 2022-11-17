@@ -1,0 +1,42 @@
+﻿@model CatPaw_University.Models.Department
+
+@{
+    ViewData["Title"] = "Department Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Department</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2 text-light">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10 font-weight-bold">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2 text-light">
+            @Html.DisplayNameFor(model => model.Budget)
+        </dt>
+        <dd class="col-sm-10 font-weight-bold">
+            @Html.DisplayFor(model => model.Budget)
+        </dd>
+        <dt class="col-sm-2 text-light">
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd class="col-sm-10 font-weight-bold">
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt class="col-sm-2 text-light">
+            @Html.DisplayNameFor(model => model.Administrator)
+        </dt>
+        <dd class="col-sm-10 font-weight-bold">
+            @Html.DisplayFor(model => model.Administrator.FullName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-light" asp-action="Edit" asp-route-id="@Model.DepartmentID">Edit</a> |
+    <a class="btn btn-dark" asp-action="Index">Back</a>
+</div>

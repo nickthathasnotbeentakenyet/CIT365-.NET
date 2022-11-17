@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "UpdateCourseCredits";
+}
+
+<h1>Update Course Credits</h1>
+
+@if (ViewData["RowsAffected"] == null)
+{
+    <form asp-action="UpdateCourseCredits">
+        <div class="form-actions no-color">
+            <p class="text-warning">
+                Enter a number to multiply every course's credits by: @Html.TextBox("multiplier")
+            </p>
+            <p>
+                <input type="submit" value="Update" class="btn btn-warning" />
+            </p>
+        </div>
+    </form>
+}
+@if (ViewData["RowsAffected"] != null)
+{
+    <p>
+        Number of rows updated: @ViewData["RowsAffected"]
+    </p>
+}
+<div>
+    <p class="btn btn-light">
+    @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
