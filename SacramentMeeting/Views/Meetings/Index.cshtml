@@ -1,0 +1,109 @@
+﻿@model PaginatedList<SacramentMeeting.Models.Meeting>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form asp-controller="Meetings" asp-action="Index" method="get">
+    <p>
+        <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+        <input type="submit" value="Search" class="btn btn-default" /> |
+        <a asp-action="Index">Full List</a>
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Date</a>
+            </th>
+            <th>
+                <span class="text-uppercase text-decoration-none text-dark">President</span>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Conductor</a>
+            </th>
+            <th>
+                <span class="text-uppercase text-decoration-none text-dark">Opening Hymn</span>
+            </th>
+            <th>
+                <span class="text-uppercase text-decoration-none text-dark">Invocation</span>
+            </th>
+            <th>
+                <span class="text-uppercase text-decoration-none text-darkt">Intermediate Hymn</span>
+            </th>
+            <th>
+                <span class="text-uppercase text-decoration-none text-darkt">Speakers</span>
+            </th>
+            <th>
+                <span class="text-uppercase text-decoration-none text-dark">Closing Hymn</span>
+            </th>
+            <th>
+                <span class="text-uppercase text-decoration-none text-dark">Benediction</span>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MeetingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.President)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Conductor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpeningHymn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpeningPrayer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IntermediateHymn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Speakers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClosingHymn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClosingPrayer)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
