@@ -28,6 +28,7 @@ namespace SacramentMeeting.Models
                         Conductor = "",
                         OpeningHymn = "",
                         OpeningPrayer = "",
+                        SacramentHymn = "",
                         IntermediateHymn = "",
                         Speakers = 0,
                         SpeakerSubject = "",

@@ -31,6 +31,8 @@ namespace SacramentMeeting.Models
         [Display(Name = "Invocation")]
         public string OpeningPrayer { get; set; }
 
+        [Display(Name = "Sacrament Hymn")]
+        public string SacramentHymn { get; set; }
 
         [Display(Name = "Intermediate Hymn")]
         public string? IntermediateHymn { get; set; }

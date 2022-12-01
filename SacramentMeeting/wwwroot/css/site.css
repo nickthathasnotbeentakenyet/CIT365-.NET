@@ -1,4 +1,8 @@
-html {
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+
+html{
   font-size: 14px;
 }
 
@@ -9,10 +13,35 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-image: url(../main.jpg);
+    background-size: cover;
+}
+
+audio {
+    height: 25px;
+}
+.line-breaks {
+    white-space: pre-line;
+}
+iframe {
+    border-radius: 10px;
+    width: 300px; 
+    height: 250px;
+    box-shadow: 5px 5px 10px brown;
+}
+footer {
+    background-color: rgba(139, 114, 114,0.5);
+}
+.navbar-brand {
+    font-family: 'Great Vibes', cursive;
+}
+.navbar .navbar-brand{
+    color: #f62e94;
+    font-size: x-large;
 }

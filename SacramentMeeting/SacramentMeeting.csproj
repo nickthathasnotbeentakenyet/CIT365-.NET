@@ -6,6 +6,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\HelloWorld\**" />
+    <Content Remove="Views\HelloWorld\**" />
+    <EmbeddedResource Remove="Views\HelloWorld\**" />
+    <None Remove="Views\HelloWorld\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\HelloWorldController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\logo1.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Home\Home.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

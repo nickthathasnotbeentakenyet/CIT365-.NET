@@ -2,12 +2,13 @@
 
 @{
     ViewData["Title"] = "Details";
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 }
 
 <h1>Details</h1>
 
 <div>
-    <h4>Meeting</h4>
+    <h4>Nevsky Ward</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -33,6 +34,7 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.OpeningHymn)
+            <a href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank"><span class="glyphicon glyphicon-music"></span></a>
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.OpeningPrayer)
@@ -40,6 +42,16 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.OpeningPrayer)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SacramentHymn)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SacramentHymn)
+            <a href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank"><span class="glyphicon glyphicon-music"></span></a>
+        </dd>
+       </dl>
+        <p class="fw-bold">Blessing and Passing of the Sacrament by Priesthood Holders</p>
+       <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.IntermediateHymn)
         </dt>
@@ -55,7 +67,7 @@
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.SpeakerSubject)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-10 line-breaks">
             @Html.DisplayFor(model => model.SpeakerSubject)
         </dd>
         <dt class = "col-sm-2">
@@ -63,6 +75,7 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ClosingHymn)
+            <a href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank"><span class="glyphicon glyphicon-music"></span></a>
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.ClosingPrayer)

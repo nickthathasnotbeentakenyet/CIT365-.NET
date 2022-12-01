@@ -1,57 +1,74 @@
 ﻿@model PaginatedList<SacramentMeeting.Models.Meeting>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Meetings List";
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div class="bg-opacity-25 bg-dark p-5 rounded-3">
+<h1 class="text-light">Nevsky Ward</h1>
+<div class="container-lg">
+    <div class="row">
+        <div class="col-lg-9">
+            <p>
+                <a class="btn btn-info " asp-action="Create">New Meeting</a>
+            </p>
+        </div>
+        <div class="col-lg-3">
+            <audio controls class="align-self-lg-end">
+                <source src="~/kolob.mp3" type="audio/mpeg">
+                Tag Audio is not supported by your browser
+                <a href="~/kolob.mp3">Listen</a>.
+            </audio>
+        </div>
+     </div>
+</div>
 <form asp-controller="Meetings" asp-action="Index" method="get">
     <p>
         <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
-        <input type="submit" value="Search" class="btn btn-default" /> |
-        <a asp-action="Index">Full List</a>
+        <input type="submit" value="Search" class="btn btn-secondary" /> |
+        <a class="btn btn-secondary" asp-action="Index">Full List</a>
     </p>
 </form>
-<table class="table">
+<table class="table table-active table-hover col-10">
     <thead>
         <tr>
-            <th>
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Date</a>
+            <th class="col-2">
+                    <a class="text-uppercase text-warning" asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Date</a>
             </th>
-            <th>
-                <span class="text-uppercase text-decoration-none text-dark">President</span>
+            <th class="col-2">
+                <span class="text-uppercase text-decoration-none text-white">President</span>
             </th>
-            <th>
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Conductor</a>
+            <th class="col-2">
+                    <a class="text-uppercase  text-warning" asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Conductor</a>
             </th>
-            <th>
+  @*          <th>
                 <span class="text-uppercase text-decoration-none text-dark">Opening Hymn</span>
             </th>
             <th>
                 <span class="text-uppercase text-decoration-none text-dark">Invocation</span>
             </th>
             <th>
-                <span class="text-uppercase text-decoration-none text-darkt">Intermediate Hymn</span>
+                <span class="text-uppercase text-decoration-none text-dark">Sacrament Hymn</span>
             </th>
             <th>
-                <span class="text-uppercase text-decoration-none text-darkt">Speakers</span>
+                <span class="text-uppercase text-decoration-none text-darkt">Musical Number</span>
+            </th>*@
+            <th class="col-2">
+                    <span class="text-uppercase text-decoration-none text-white">Speakers</span>
             </th>
-            <th>
+@*            <th>
                 <span class="text-uppercase text-decoration-none text-dark">Closing Hymn</span>
             </th>
             <th>
                 <span class="text-uppercase text-decoration-none text-dark">Benediction</span>
+            </th>*@
+            <th class="col-1">
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+        <tr class="text-white">
             <td>
                 @Html.DisplayFor(modelItem => item.MeetingDate)
             </td>
@@ -61,28 +78,31 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Conductor)
             </td>
-            <td>
+@*                <td class="col-2">
                 @Html.DisplayFor(modelItem => item.OpeningHymn)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.OpeningPrayer)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IntermediateHymn)
+                <td class="col-2">
+                @Html.DisplayFor(modelItem => item.SacramentHymn)
             </td>
+                <td class="col-2">
+                @Html.DisplayFor(modelItem => item.IntermediateHymn)
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Speakers)
             </td>
-            <td>
+@*            <td class="col-2">
                 @Html.DisplayFor(modelItem => item.ClosingHymn)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ClosingPrayer)
-            </td>
+            </td>*@
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="btn-sm btn-primary text-decoration-none glyphicon glyphicon-th" asp-action="Details" asp-route-id="@item.Id"></a>
+                <a class="btn-sm btn-secondary text-decoration-none glyphicon glyphicon-pencil" asp-action="Edit" asp-route-id="@item.Id"></a>
+                <a class="btn-sm btn-danger text-decoration-none glyphicon glyphicon-remove-circle" asp-action="Delete" asp-route-id="@item.Id"></a>
             </td>
         </tr>
 }
@@ -107,3 +127,4 @@
    class="btn btn-default @nextDisabled">
     Next
 </a>
+</div>
