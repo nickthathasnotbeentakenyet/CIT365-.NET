@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SacramentMeeting.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="shortcut icon" href="~/logo.png" />
 </head>
 <body>
@@ -19,11 +20,11 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item" >
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                    </ul>
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item" >
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                        </ul>
                 </div>
             </div>
         </nav>
@@ -34,10 +35,18 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-white">
-        <div class="container">
+    <footer class="border-top footer text-white ">
+        <div class="container justify-content-around">
+            <div class="row">
+            <span class="col-10">
             &copy; @DateTime.Now.DayOfWeek, @DateTime.Now.ToShortDateString() | Sacrament Meeting | 
             <a target="_blank" class="text-white text-decoration-none" href="https://www.churchofjesuschrist.org/ " >The Church of Jesus Christ of Latter-day Saints</a>
+            </span>
+            <span class="col-1">
+                    <a id='bg' class="exbutton text-decoration-none glyphicon glyphicon-picture p-2"></a>
+            <button id="backtodefault" class="exbutton">Default</button>
+            </span>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -45,4 +54,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

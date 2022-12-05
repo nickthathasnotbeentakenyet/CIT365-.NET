@@ -14,59 +14,60 @@
     <div class="row justify-content-between bg-opacity-25 bg-dark p-5 rounded-3">
             <div class="col-4">
             <div class="form-group">
-                <label asp-for="MeetingDate" class="control-label text-white"></label>
+                <label asp-for="MeetingDate" class="control-label text-white fw-bold"></label>
                 <input asp-for="MeetingDate" class="form-control" />
                 <span asp-validation-for="MeetingDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="President" class="control-label text-white"></label>
+                <label asp-for="President" class="control-label text-white fw-bold"></label>
                 <input asp-for="President" class="form-control" />
                 <span asp-validation-for="President" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Conductor" class="control-label text-white"></label>
+                <label asp-for="Conductor" class="control-label text-white fw-bold"></label>
                 <input asp-for="Conductor" class="form-control" />
                 <span asp-validation-for="Conductor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <a class="text-decoration-none text-white" href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank">Opening Hymn</a>
+                <a class="text-decoration-none text-white fw-bold" href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank">Opening Hymn</a>
                 <input asp-for="OpeningHymn" class="form-control" />
                 <span asp-validation-for="OpeningHymn" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="OpeningPrayer" class="control-label text-white"></label>
+                <label asp-for="OpeningPrayer" class="control-label text-white fw-bold"></label>
                 <input asp-for="OpeningPrayer" class="form-control" />
                 <span asp-validation-for="OpeningPrayer" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <a class="text-decoration-none text-white" href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank">Sacrament Hymn</a>
+                <a class="text-decoration-none text-white fw-bold" href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank">Sacrament Hymn</a>
                 <input asp-for="SacramentHymn" class="form-control" />
                 <span asp-validation-for="SacramentHymn" class="text-danger"></span>
             </div>
             </div>
+            <div class="col-4"></div>
             <div class="col-4">
             <div class="form-group">
-                <a class="text-decoration-none text-white" href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank">Intermediate Hymn</a>
+                <a class="text-decoration-none text-white fw-bold" href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank">Intermediate Hymn</a>
                 <input asp-for="IntermediateHymn" class="form-control" />
                 <span asp-validation-for="IntermediateHymn" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Speakers" class="control-label text-white"></label>
+                <label asp-for="Speakers" class="control-label text-white fw-bold"></label>
                 <input asp-for="Speakers" class="form-control" />
                 <span asp-validation-for="Speakers" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SpeakerSubject" class="control-label text-white"></label>
+                <label asp-for="SpeakerSubject" class="control-label text-white fw-bold"></label>
                 <textarea asp-for="SpeakerSubject" class="form-control"></textarea>
                 <span asp-validation-for="SpeakerSubject" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <a class="text-decoration-none text-white" href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank">Closing Hymn</a>
+                <a class="text-decoration-none text-white fw-bold" href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank">Closing Hymn</a>
                 <input asp-for="ClosingHymn" class="form-control" />
                 <span asp-validation-for="ClosingHymn" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ClosingPrayer" class="control-label text-white"></label>
+                <label asp-for="ClosingPrayer" class="control-label text-white fw-bold"></label>
                 <input asp-for="ClosingPrayer" class="form-control" />
                 <span asp-validation-for="ClosingPrayer" class="text-danger"></span>
             </div>
@@ -77,9 +78,6 @@
             </div>
     </div>
         </form>
-
-
-
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

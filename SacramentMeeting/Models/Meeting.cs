@@ -31,6 +31,8 @@ namespace SacramentMeeting.Models
         [Display(Name = "Invocation")]
         public string OpeningPrayer { get; set; }
 
+        [Required]
+        [StringLength(60, MinimumLength = 3)]
         [Display(Name = "Sacrament Hymn")]
         public string SacramentHymn { get; set; }
 
@@ -40,6 +42,7 @@ namespace SacramentMeeting.Models
 
         public int? Speakers { get; set; }
         [DataType(DataType.Text)]
+        [Display(Name = "Speaker Subject")]
         public string? SpeakerSubject { get; set; }
 
         [Required]

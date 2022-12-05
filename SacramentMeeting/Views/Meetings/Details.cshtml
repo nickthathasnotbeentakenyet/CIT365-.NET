@@ -5,87 +5,92 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Nevsky Ward</h4>
+<div class="row text-white mb-5">
+    <div class="col-3"></div>
+    <div class="col-6 bg-opacity-75 bg-dark rounded-3 px-5">
+        <div class="text-center">
+    <h1 class="text-white">*Sacrament Meeting*</h1>
+    <h4 class="text-white">Nevsky Ward</h4>
+    <h5 class="text-white fw-bold">@Html.DisplayFor(model => model.MeetingDate)</h5>
+        </div>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MeetingDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MeetingDate)
-        </dd>
-        <dt class = "col-sm-2">
+        <dl class="row">
+        <dt class = "col-sm-4">
             @Html.DisplayNameFor(model => model.President)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-8 text-end">
             @Html.DisplayFor(model => model.President)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-4">
             @Html.DisplayNameFor(model => model.Conductor)
         </dt>
-        <dd class = "col-sm-10">
+            <dd class="col-sm-8 text-end">
             @Html.DisplayFor(model => model.Conductor)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-4">
             @Html.DisplayNameFor(model => model.OpeningHymn)
         </dt>
-        <dd class = "col-sm-10">
+            <dd class="col-sm-8 text-end">
             @Html.DisplayFor(model => model.OpeningHymn)
-            <a href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank"><span class="glyphicon glyphicon-music"></span></a>
+            <a href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank"><span class="glyphicon glyphicon-music text-white"></span></a>
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-4">
             @Html.DisplayNameFor(model => model.OpeningPrayer)
         </dt>
-        <dd class = "col-sm-10">
+            <dd class="col-sm-8 text-end">
             @Html.DisplayFor(model => model.OpeningPrayer)
+            <hr class="w-50"/>
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.SacramentHymn)
         </dt>
-        <dd class="col-sm-10">
+            <dd class="col-sm-8 text-end">
             @Html.DisplayFor(model => model.SacramentHymn)
-            <a href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank"><span class="glyphicon glyphicon-music"></span></a>
+                <a href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank"><span class="glyphicon glyphicon-music text-white"></span></a>
         </dd>
        </dl>
-        <p class="fw-bold">Blessing and Passing of the Sacrament by Priesthood Holders</p>
+        <p class="fw-bold text-center">Blessing and Passing of the Sacrament by Priesthood Holders
+            <hr class="w-50 mx-auto" />
+        </p>
        <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-4">
             @Html.DisplayNameFor(model => model.IntermediateHymn)
         </dt>
-        <dd class = "col-sm-10">
+            <dd class="col-sm-8 text-end">
             @Html.DisplayFor(model => model.IntermediateHymn)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-4">
             @Html.DisplayNameFor(model => model.Speakers)
         </dt>
-        <dd class = "col-sm-10">
+            <dd class="col-sm-8 text-end">
             @Html.DisplayFor(model => model.Speakers)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-4">
             @Html.DisplayNameFor(model => model.SpeakerSubject)
         </dt>
-        <dd class = "col-sm-10 line-breaks">
+            <dd class="col-sm-8 line-breaks text-end">
             @Html.DisplayFor(model => model.SpeakerSubject)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-4">
             @Html.DisplayNameFor(model => model.ClosingHymn)
         </dt>
-        <dd class = "col-sm-10">
+            <dd class="col-sm-8 text-end">
             @Html.DisplayFor(model => model.ClosingHymn)
-            <a href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank"><span class="glyphicon glyphicon-music"></span></a>
+                <a href="https://www.churchofjesuschrist.org/music/library/hymns?lang=eng" target="_blank"><span class="glyphicon glyphicon-music text-white"></span></a>
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-4">
             @Html.DisplayNameFor(model => model.ClosingPrayer)
         </dt>
-        <dd class = "col-sm-10">
+            <dd class="col-sm-8 text-end">
             @Html.DisplayFor(model => model.ClosingPrayer)
         </dd>
     </dl>
+        <div class="mb-5">
+            <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+            <a class="btn btn-secondary" asp-action="Index">Back</a>
+        </div>
+    </div>
+    <div class="col-3"></div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+
