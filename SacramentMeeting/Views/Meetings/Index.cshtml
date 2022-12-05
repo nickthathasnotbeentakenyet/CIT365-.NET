@@ -4,8 +4,8 @@
     ViewData["Title"] = "Meetings List";
 }
 <div class="bg-opacity-25 bg-dark p-5 rounded-3">
-<h1 class="text-light">Nevsky Ward</h1>
-<div class="container-lg">
+<div class="container">
+     <h1 class="text-light">Nevsky Ward</h1>
     <div class="row">
         <div class="col-lg-9">
             <p>
@@ -19,94 +19,59 @@
                 <a href="~/kolob.mp3">Listen</a>.
             </audio>
         </div>
+        <form asp-controller="Meetings" asp-action="Index" method="get">
+            <p>
+                <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+                <input type="submit" value="Search" class="btn btn-secondary" /> |
+                <a class="btn btn-secondary" asp-action="Index">Full List</a>
+            </p>
+        </form>
      </div>
 </div>
-<form asp-controller="Meetings" asp-action="Index" method="get">
-    <p>
-        <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
-        <input type="submit" value="Search" class="btn btn-secondary" /> |
-        <a class="btn btn-secondary" asp-action="Index">Full List</a>
-    </p>
-</form>
-<table class="table table-active table-hover col-10">
-    <thead>
-        <tr>
-            <th class="col-2">
-                    <a class="text-uppercase text-warning" asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Date</a>
-            </th>
-            <th class="col-2">
-                <span class="text-uppercase text-decoration-none text-white">President</span>
-            </th>
-            <th class="col-2">
-                    <a class="text-uppercase  text-warning" asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Conductor</a>
-            </th>
-  @*          <th>
-                <span class="text-uppercase text-decoration-none text-dark">Opening Hymn</span>
-            </th>
-            <th>
-                <span class="text-uppercase text-decoration-none text-dark">Invocation</span>
-            </th>
-            <th>
-                <span class="text-uppercase text-decoration-none text-dark">Sacrament Hymn</span>
-            </th>
-            <th>
-                <span class="text-uppercase text-decoration-none text-darkt">Musical Number</span>
-            </th>*@
-            <th class="col-2">
-                    <span class="text-uppercase text-decoration-none text-white">Speakers</span>
-            </th>
-@*            <th>
-                <span class="text-uppercase text-decoration-none text-dark">Closing Hymn</span>
-            </th>
-            <th>
-                <span class="text-uppercase text-decoration-none text-dark">Benediction</span>
-            </th>*@
-            <th class="col-1">
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr class="text-white">
-            <td>
+
+<div class="row">
+
+@foreach (var item in Model)
+{
+<div class="card-group col-4 justify-content-around m-auto">
+    <div class="card text-white mb-3" style="max-width: 30rem; box-shadow: 2px 2px 7px white">
+        <div class="card-header bg-light">
+            <span>
+                <a class="text-uppercase text-warning fw-bold" asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Date</a>
+            </span>
+            <span class="text-dark fw-bold">
                 @Html.DisplayFor(modelItem => item.MeetingDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.President)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Conductor)
-            </td>
-@*                <td class="col-2">
-                @Html.DisplayFor(modelItem => item.OpeningHymn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OpeningPrayer)
-            </td>
-                <td class="col-2">
-                @Html.DisplayFor(modelItem => item.SacramentHymn)
-            </td>
-                <td class="col-2">
-                @Html.DisplayFor(modelItem => item.IntermediateHymn)
-            </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.Speakers)
-            </td>
-@*            <td class="col-2">
-                @Html.DisplayFor(modelItem => item.ClosingHymn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClosingPrayer)
-            </td>*@
-            <td>
-                <a class="btn-sm btn-primary text-decoration-none glyphicon glyphicon-th" asp-action="Details" asp-route-id="@item.Id"></a>
-                <a class="btn-sm btn-secondary text-decoration-none glyphicon glyphicon-pencil" asp-action="Edit" asp-route-id="@item.Id"></a>
-                <a class="btn-sm btn-danger text-decoration-none glyphicon glyphicon-remove-circle" asp-action="Delete" asp-route-id="@item.Id"></a>
-            </td>
-        </tr>
+            </span>
+        </div>
+        <div class="card-body bg-secondary"> 
+            <p>
+            <span class="text-uppercase text-decoration-none text-white">President: </span>
+            @Html.DisplayFor(modelItem => item.President)
+            </p>
+             <p>
+            <a class="text-uppercase  text-warning" asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Conductor: </a>
+            <span >@Html.DisplayFor(modelItem => item.Conductor)</span>
+            </p>
+            <p>
+            <span class="text-uppercase text-decoration-none text-white">Speakers: </span>
+            @Html.DisplayFor(modelItem => item.Speakers)
+            </p>
+            <p>
+            <a class="btn-sm btn-primary text-decoration-none glyphicon glyphicon-th" asp-action="Details" asp-route-id="@item.Id"></a>
+            <a class="btn-sm btn-info text-decoration-none glyphicon glyphicon-pencil" asp-action="Edit" asp-route-id="@item.Id"></a>
+            <a class="btn-sm btn-danger text-decoration-none glyphicon glyphicon-remove-circle" asp-action="Delete" asp-route-id="@item.Id"></a>
+            </p>
+        </div>
+    </div>
+</div>
 }
-    </tbody>
-</table>
+    </div>
+
+
+
+
+
+<div class="text-center">
 @{
     var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";
@@ -126,4 +91,5 @@
    class="btn btn-default @nextDisabled">
     Next
 </a>
+    </div>
 </div>
