@@ -38,12 +38,12 @@
             // AddQuoteButton
             // 
             this.AddQuoteButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.AddQuoteButton.Font = new System.Drawing.Font("Roboto Mono for Powerline", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddQuoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddQuoteButton.ForeColor = System.Drawing.Color.Maroon;
-            this.AddQuoteButton.Location = new System.Drawing.Point(23, 23);
-            this.AddQuoteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddQuoteButton.Location = new System.Drawing.Point(31, 28);
+            this.AddQuoteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddQuoteButton.Name = "AddQuoteButton";
-            this.AddQuoteButton.Size = new System.Drawing.Size(165, 30);
+            this.AddQuoteButton.Size = new System.Drawing.Size(220, 37);
             this.AddQuoteButton.TabIndex = 0;
             this.AddQuoteButton.Text = "&Add Quote";
             this.AddQuoteButton.UseVisualStyleBackColor = false;
@@ -51,12 +51,12 @@
             // 
             // ViewQuotesButton
             // 
-            this.ViewQuotesButton.Font = new System.Drawing.Font("Roboto Mono for Powerline", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ViewQuotesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ViewQuotesButton.ForeColor = System.Drawing.Color.Maroon;
-            this.ViewQuotesButton.Location = new System.Drawing.Point(23, 68);
-            this.ViewQuotesButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViewQuotesButton.Location = new System.Drawing.Point(31, 84);
+            this.ViewQuotesButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ViewQuotesButton.Name = "ViewQuotesButton";
-            this.ViewQuotesButton.Size = new System.Drawing.Size(165, 30);
+            this.ViewQuotesButton.Size = new System.Drawing.Size(220, 37);
             this.ViewQuotesButton.TabIndex = 1;
             this.ViewQuotesButton.Text = "&View Quote";
             this.ViewQuotesButton.UseVisualStyleBackColor = true;
@@ -64,12 +64,12 @@
             // 
             // SearchQuotesButton
             // 
-            this.SearchQuotesButton.Font = new System.Drawing.Font("Roboto Mono for Powerline", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SearchQuotesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SearchQuotesButton.ForeColor = System.Drawing.Color.Maroon;
-            this.SearchQuotesButton.Location = new System.Drawing.Point(23, 114);
-            this.SearchQuotesButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchQuotesButton.Location = new System.Drawing.Point(31, 140);
+            this.SearchQuotesButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchQuotesButton.Name = "SearchQuotesButton";
-            this.SearchQuotesButton.Size = new System.Drawing.Size(165, 30);
+            this.SearchQuotesButton.Size = new System.Drawing.Size(220, 37);
             this.SearchQuotesButton.TabIndex = 2;
             this.SearchQuotesButton.Text = "&Search Quotes";
             this.SearchQuotesButton.UseVisualStyleBackColor = true;
@@ -77,12 +77,12 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.Font = new System.Drawing.Font("Roboto Mono for Powerline", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExitButton.ForeColor = System.Drawing.Color.Maroon;
-            this.ExitButton.Location = new System.Drawing.Point(23, 160);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExitButton.Location = new System.Drawing.Point(31, 197);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(165, 30);
+            this.ExitButton.Size = new System.Drawing.Size(220, 37);
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "E&xit";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -90,19 +90,19 @@
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.SearchQuotesButton);
             this.Controls.Add(this.ViewQuotesButton);
             this.Controls.Add(this.AddQuoteButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainMenu";
-            this.Text = "Form1";
+            this.Text = "MegaDesk";
             this.ResumeLayout(false);
 
         }

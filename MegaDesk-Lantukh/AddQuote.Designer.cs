@@ -46,11 +46,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Mono for Powerline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
             this.label1.Location = new System.Drawing.Point(24, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 24);
+            this.label1.Size = new System.Drawing.Size(253, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Please enter your name: ";
             // 
@@ -64,11 +64,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto Mono for Powerline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
             this.label2.Location = new System.Drawing.Point(24, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 24);
+            this.label2.Size = new System.Drawing.Size(144, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Width of desk";
             // 
@@ -76,7 +76,7 @@
             // 
             this.deskWidth.Location = new System.Drawing.Point(28, 107);
             this.deskWidth.Name = "deskWidth";
-            this.deskWidth.Size = new System.Drawing.Size(100, 22);
+            this.deskWidth.Size = new System.Drawing.Size(200, 22);
             this.deskWidth.TabIndex = 3;
             // 
             // label3
@@ -94,17 +94,17 @@
             // 
             this.deskDepth.Location = new System.Drawing.Point(28, 176);
             this.deskDepth.Name = "deskDepth";
-            this.deskDepth.Size = new System.Drawing.Size(100, 22);
+            this.deskDepth.Size = new System.Drawing.Size(200, 22);
             this.deskDepth.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto Mono for Powerline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.SteelBlue;
             this.label4.Location = new System.Drawing.Point(24, 213);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 24);
+            this.label4.Size = new System.Drawing.Size(193, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "Number of drawers";
             // 
@@ -113,17 +113,17 @@
             this.deskDrawers.FormattingEnabled = true;
             this.deskDrawers.Location = new System.Drawing.Point(28, 240);
             this.deskDrawers.Name = "deskDrawers";
-            this.deskDrawers.Size = new System.Drawing.Size(121, 24);
+            this.deskDrawers.Size = new System.Drawing.Size(200, 24);
             this.deskDrawers.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto Mono for Powerline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
             this.label5.Location = new System.Drawing.Point(24, 280);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 24);
+            this.label5.Size = new System.Drawing.Size(136, 25);
             this.label5.TabIndex = 8;
             this.label5.Text = "Material type";
             // 
@@ -132,17 +132,17 @@
             this.deskMaterial.FormattingEnabled = true;
             this.deskMaterial.Location = new System.Drawing.Point(28, 307);
             this.deskMaterial.Name = "deskMaterial";
-            this.deskMaterial.Size = new System.Drawing.Size(121, 24);
+            this.deskMaterial.Size = new System.Drawing.Size(200, 24);
             this.deskMaterial.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto Mono for Powerline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.SteelBlue;
             this.label6.Location = new System.Drawing.Point(24, 347);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(262, 24);
+            this.label6.Size = new System.Drawing.Size(224, 25);
             this.label6.TabIndex = 10;
             this.label6.Text = "Order processing time";
             // 
@@ -151,13 +151,13 @@
             this.orderTime.FormattingEnabled = true;
             this.orderTime.Location = new System.Drawing.Point(28, 384);
             this.orderTime.Name = "orderTime";
-            this.orderTime.Size = new System.Drawing.Size(121, 24);
+            this.orderTime.Size = new System.Drawing.Size(200, 24);
             this.orderTime.TabIndex = 11;
             // 
             // SubmitOrder
             // 
             this.SubmitOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SubmitOrder.Font = new System.Drawing.Font("Roboto Mono for Powerline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubmitOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SubmitOrder.ForeColor = System.Drawing.Color.Maroon;
             this.SubmitOrder.Location = new System.Drawing.Point(556, 405);
             this.SubmitOrder.Name = "SubmitOrder";
@@ -171,6 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = global::MegaDesk_Lantukh.Properties.Resources.addQuote;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -189,6 +190,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddQuote";
             this.Text = "AddQuote";
+            this.Load += new System.EventHandler(this.AddQuote_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

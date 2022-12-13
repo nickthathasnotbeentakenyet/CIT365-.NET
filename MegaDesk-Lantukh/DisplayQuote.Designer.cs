@@ -37,43 +37,49 @@
             // 
             // displayName
             // 
+            this.displayName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.displayName.Location = new System.Drawing.Point(23, 12);
             this.displayName.Name = "displayName";
-            this.displayName.Size = new System.Drawing.Size(198, 22);
+            this.displayName.Size = new System.Drawing.Size(198, 15);
             this.displayName.TabIndex = 0;
             // 
             // textBox2
             // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Location = new System.Drawing.Point(23, 236);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 22);
+            this.textBox2.Size = new System.Drawing.Size(198, 15);
             this.textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Location = new System.Drawing.Point(23, 181);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(198, 22);
+            this.textBox3.Size = new System.Drawing.Size(198, 15);
             this.textBox3.TabIndex = 2;
             // 
             // textBox4
             // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Location = new System.Drawing.Point(23, 122);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(198, 22);
+            this.textBox4.Size = new System.Drawing.Size(198, 15);
             this.textBox4.TabIndex = 3;
             // 
             // textBox5
             // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Location = new System.Drawing.Point(23, 65);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(198, 22);
+            this.textBox5.Size = new System.Drawing.Size(198, 15);
             this.textBox5.TabIndex = 4;
             // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);

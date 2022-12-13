@@ -24,5 +24,10 @@ namespace MegaDesk_Lantukh
             DisplayQuote OrdersForm = new DisplayQuote();
             OrdersForm.Show();
         }
+
+        private void AddQuote_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
